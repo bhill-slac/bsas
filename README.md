@@ -5,7 +5,7 @@ Consists of two components: collector and file writer.
 
 Collector is build as `bin/*/bsas`.
 Code entry points are in [bsasApp/src/hooks.cpp](bsasApp/src/hooks.cpp).
-See [iocBoot/ioctest/rx.cmd](iocBoot/ioctest/rx.cmd) for example configuration.
+See [iocBoot/ioctest/rx.cmd](iocBoot/ioctest/rx.cmd) for example of how to configure and run a collector.
 
 File writer is [python/h5tablewriter.py](python/h5tablewriter.py).
 See [iocBoot/ioctest/test.ini](iocBoot/ioctest/test.ini) for example configuration.
@@ -21,11 +21,19 @@ Requires
 Testing
 -------
 
-Run [iocBoot/ioctest/tx1.cmd](iocBoot/ioctest/tx1.cmd)
-and [iocBoot/ioctest/tx2.cmd](iocBoot/ioctest/tx2.cmd).
+Run a collector:
+[iocBoot/ioctest/rx.cmd](iocBoot/ioctest/rx.cmd)
+Run two sample IOC's:
+[iocBoot/ioctest/tx1.cmd](iocBoot/ioctest/tx1.cmd)
+[iocBoot/ioctest/tx2.cmd](iocBoot/ioctest/tx2.cmd).
 
+Use pvput to start the collector by writing a PV list to RX:SIG.
 ```sh
 $ pvput RX:SIG X TX:cnt{1,2,3,4}
+```
+
+Use pvget to check the collector status and fetch the BSAS table.
+```sh
 $ pvget RX:STS
 $ pvget RX:TBL
 ```
