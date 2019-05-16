@@ -152,17 +152,17 @@ void Coordinator::handle()
 
                         conn[i] = sub.connected;
 
-                        events[i] = sub.nUpdates - sub.lUpdates;
-                        bytes[i] = sub.nUpdateBytes - sub.lUpdateBytes;
-                        discons[i] = sub.nDisconnects - sub.lDisconnects;
-                        errors[i] = sub.nErrors - sub.lErrors;
-                        oflows[i] = sub.nOverflows - sub.lOverflows;
+                        events[i]	= sub.nUpdates		- sub.lUpdates;
+                        bytes[i]	= sub.nUpdateBytes	- sub.lUpdateBytes;
+                        discons[i]	= sub.nDisconnects	- sub.lDisconnects;
+                        errors[i]	= sub.nErrors		- sub.lErrors;
+                        oflows[i]	= sub.nOverflows	- sub.lOverflows;
 
-                        sub.lUpdates = sub.nUpdates;
-                        sub.lUpdateBytes = sub.nUpdateBytes;
-                        sub.lDisconnects = sub.nDisconnects;
-                        sub.lErrors = sub.nErrors;
-                        sub.lOverflows = sub.nOverflows;
+                        sub.lUpdates	= sub.nUpdates;
+                        sub.lUpdateBytes= sub.nUpdateBytes;
+                        sub.lDisconnects= sub.nDisconnects;
+                        sub.lErrors		= sub.nErrors;
+                        sub.lOverflows	= sub.nOverflows;
                     }
                 }
 
