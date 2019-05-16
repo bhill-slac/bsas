@@ -1,4 +1,4 @@
-#!../../bin/linux-x86_64/bsas
+#!../../bin/rhel7-x86_64/bsas
 
 ## Register all support components
 dbLoadDatabase("../../dbd/bsas.dbd",0,0)
