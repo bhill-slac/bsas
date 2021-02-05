@@ -90,8 +90,8 @@ struct NumericScalarCopier : public PVAReceiver::ColCopy
             assert(elem.size()==1);
 
             scratch[r] = elem[0];
-	
-			// NO backfill!  Backfill obscures whether or not we missed an update!!!
+
+            // NO backfill!  Backfill obscures whether or not we missed an update!!!
             // column.last.swap(cell);
             column.last.reset();
         }

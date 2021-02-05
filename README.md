@@ -23,9 +23,15 @@ Testing
 
 Run a collector:
 [iocBoot/ioctest/rx.cmd](iocBoot/ioctest/rx.cmd)
+```sh
+iocBoot/ioctest/rx.cmd
+```
+
 Run two sample IOC's:
-[iocBoot/ioctest/tx1.cmd](iocBoot/ioctest/tx1.cmd)
-[iocBoot/ioctest/tx2.cmd](iocBoot/ioctest/tx2.cmd).
+```sh
+iocBoot/ioctest/tx1.cmd
+iocBoot/ioctest/tx2.cmd
+```
 
 Use pvput to start the collector by writing a PV list to RX:SIG.
 ```sh
